@@ -1,47 +1,54 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <h1 class="title">
-        evimatch
+        EviMatch
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+
+      <div class="game-lists">
+        <div class="game-list">
+          Matched Games
+        </div>
+        <div class="game-list">
+          Queued Games
+        </div>
       </div>
+
+      <div class="buttons-group">
+        <nuxt-link class="button--green" to="/new-game">Queue new games</nuxt-link>
+      </div>
+
+      {{message}}
+
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      message: 'API message'
+    };
+  },
+  async asyncData() {
+    // axios.get('api/message')
+    //     .then((response) => {
+    //       this.message = response.data;
+    //     })
+    //     .catch((err) => {
+    //       console.error(err);
+    //     });
+  },
+  mounted() {
+  }
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
+body {
   font-family:
     'Quicksand',
     'Source Sans Pro',
@@ -52,6 +59,17 @@ export default {}
     'Helvetica Neue',
     Arial,
     sans-serif;
+}
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {  
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -59,15 +77,20 @@ export default {}
   letter-spacing: 1px;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.game-lists {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);  
 }
 
-.links {
-  padding-top: 15px;
+.game-list {
+  border: solid #eee 1px;
+  padding: 20px;
+}
+
+.buttons-group {
+  margin-top: 25px;
+}
+
+.button--green:hover, .button--grey {
+  cursor: pointer;
 }
 </style>

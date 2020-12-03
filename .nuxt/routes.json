@@ -1,9 +1,16 @@
 [
   {
+    "name": "new-game",
+    "path": "/new-game",
+    "component": "D:\\\\git\\\\evimatch\\\\pages\\\\new-game.vue",
+    "chunkName": "pages/new-game",
+    "_name": "_cb590c30"
+  },
+  {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\git\\\\evimatch\\\\evimatch\\\\evimatch\\\\pages\\\\index.vue",
+    "component": "D:\\\\git\\\\evimatch\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_29e8e85a"
+    "_name": "_319ee539"
   }
 ]
