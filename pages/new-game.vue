@@ -1,39 +1,35 @@
 <template>
 <div>
-    <nuxt-link class="button--green" to="/">Back</nuxt-link>
-    <div class="wrapper">
+    <nuxt-link class="btn-back" to="/"><Arrow />Back</nuxt-link>
+
+    <div class="container">
+
         <div>
-            <h2>Add game</h2>
+            <section class="section">
 
-            <div>
-                <label for="gamename">Game name</label>
-                <input id="gamename" type="text" />
-            </div>
-            <div>
-            <label for="amountplayers">Amount of players</label>
-            <input id="amountplayers" type="text" value="0" />
-            </div>
+                <h2 class="subtitle">Add game</h2>
 
-            <div class="buttons-group">
-                <span class="button--grey">Submit</span>
-            </div>
-        </div>    
+                <div class="field">
+                    <input id="gamename" class="input" type="text" placeholder="Game name" />
+                </div>
+
+                <div class="field">
+                    <input id="amountplayers" class="input" type="text" placeholder="Amount of players" />
+                </div>
+
+            </section>
+
+            <span class="btn">Submit</span> 
+        </div>
     </div>
 </div>
 </template>
 
-<style scoped>
-.button--green {
-    margin: 25px;
+<script>
+import Arrow from "~/components/arrow.vue";
+export default {
+    components: {
+        Arrow
+  },
 }
-
-label {
-    display: block;
-}
-
-.wrapper {
-    margin: 0 25px;
-    display: flex;
-    justify-content: center;
-}
-</style>
+</script>

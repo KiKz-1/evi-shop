@@ -1,1 +1,8 @@
-{}
+{
+  "Arrow": {
+    "description": "Auto imported from components/arrow.vue"
+  },
+  "LazyArrow": {
+    "description": "Auto imported from components/arrow.vue"
+  }
+}
