@@ -94,4 +94,14 @@ html {
 .input {
   padding: 5px 15px;
 }
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  border: solid 1px #eee;
+  padding: 5px;
+}
 </style>

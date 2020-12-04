@@ -18,8 +18,7 @@
                 </div>
 
             </section>
-
-            <span class="btn">Submit</span> 
+            <span class="btn" @click="addNewGame">Submit</span> 
         </div>
     </div>
 </div>
@@ -30,6 +29,16 @@ import Arrow from "~/components/arrow.vue";
 export default {
     components: {
         Arrow
-  },
+    },
+    data() {
+        return {
+            
+        };
+    },
+    methods: {
+        async addNewGame() {
+            
+        }
+    }
 }
 </script>

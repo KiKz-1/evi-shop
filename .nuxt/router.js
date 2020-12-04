@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _2d687cc9 = () => interopDefault(import('..\\pages\\my-games.vue' /* webpackChunkName: "pages/my-games" */))
 const _cb590c30 = () => interopDefault(import('..\\pages\\new-game.vue' /* webpackChunkName: "pages/new-game" */))
 const _319ee539 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -23,6 +24,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/my-games",
+    component: _2d687cc9,
+    name: "my-games"
+  }, {
     path: "/new-game",
     component: _cb590c30,
     name: "new-game"

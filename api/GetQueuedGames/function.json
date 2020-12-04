@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["get", "post", "put"],
+      "route": "queuedGame"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "queuedGames",
+      "type": "cosmosDB",
+      "direction": "in",
+      "databaseName": "evimatchdb",
+      "collectionName": "QueuedGames",
+      "sqlQuery": "SELECT * FROM c",
+      "connectionStringSetting": "CosmosDBConnection"   
+    }
+  ]
+}
