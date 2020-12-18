@@ -1,9 +1,19 @@
 <template>
   <div>
+    <Header />
     <Nuxt />
   </div>
 </template>
 
+<script>
+import Header from '~/components/header.vue';
+
+export default {
+  components: {
+    Header
+  }
+}
+</script>
 <style>
 html {
   font-family: 'Ubuntu', sans-serif;
@@ -40,68 +50,10 @@ html {
   letter-spacing: 1px;
 }
 
-.subtitle {  
-  display: block;
-  font-weight: 300;
-  font-size: 4rem;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
 .section {
   border: solid #eee 1px;
   box-shadow: 1px 1px 4px #eee;
   margin: 25px 0;
   padding: 25px;
-}
-
-.game-list {
-  padding: 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 20px;
-  background-color: #eee;
-  border: solid 1px #ccc;
-  color: rgba(46, 46, 46, 0.87);
-  transition: background-color .25s ease-in-out;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.btn:hover {  
-  cursor: pointer;
-  background-color: #ccc;
-}
-
-.btn-back {
-  display: inline-flex;
-  padding: 10px;
-  text-decoration: none;
-  color: rgba(46, 46, 46, 0.87);
-  justify-content: space-between;
-  min-width: 80px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  min-width: 200px;
-  margin: 25px;
-}
-
-.input {
-  padding: 5px 15px;
-}
-
-.list {
-  padding: 0;
-  list-style: none;
-}
-
-.list-item {
-  border: solid 1px #eee;
-  padding: 5px;
 }
 </style>

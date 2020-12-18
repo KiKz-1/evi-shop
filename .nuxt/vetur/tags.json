@@ -1,8 +1,8 @@
 {
-  "Arrow": {
-    "description": "Auto imported from components/arrow.vue"
+  "Header": {
+    "description": "Auto imported from components/header.vue"
   },
-  "LazyArrow": {
-    "description": "Auto imported from components/arrow.vue"
+  "LazyHeader": {
+    "description": "Auto imported from components/header.vue"
   }
 }

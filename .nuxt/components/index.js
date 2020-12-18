@@ -1,3 +1,3 @@
-export { default as Arrow } from '../..\\components\\arrow.vue'
+export { default as Header } from '../..\\components\\header.vue'
 
-export const LazyArrow = import('../..\\components\\arrow.vue' /* webpackChunkName: "components_arrow" */).then(c => c.default || c)
+export const LazyHeader = import('../..\\components\\header.vue' /* webpackChunkName: "components_header" */).then(c => c.default || c)

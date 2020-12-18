@@ -1,23 +1,9 @@
 [
   {
-    "name": "my-games",
-    "path": "/my-games",
-    "component": "D:\\\\git\\\\evimatch\\\\pages\\\\my-games.vue",
-    "chunkName": "pages/my-games",
-    "_name": "_2d687cc9"
-  },
-  {
-    "name": "new-game",
-    "path": "/new-game",
-    "component": "D:\\\\git\\\\evimatch\\\\pages\\\\new-game.vue",
-    "chunkName": "pages/new-game",
-    "_name": "_cb590c30"
-  },
-  {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\git\\\\evimatch\\\\pages\\\\index.vue",
+    "component": "D:\\\\git\\\\evi-shop\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_319ee539"
+    "_name": "_674566d2"
   }
 ]
