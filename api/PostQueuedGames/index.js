@@ -1,9 +1,8 @@
+require("dotenv").config();
 const CosmosClient = require("@azure/cosmos").CosmosClient;
-const config = require("../config");
-const { endpoint, key, databaseId, containerId } = config;
-const client = new CosmosClient({ endpoint, key });
-const database = client.database(databaseId);
-const container = database.container(containerId);
+const client = new CosmosClient({ endpoint: process.env.ENDPOINT, key: process.env.KEY });
+const database = client.database(process.env.DATABASEID);
+const container = database.container(process.env.CONTAINERID);
 
 module.exports = async function (context, req) {
     const newGame = req.body.newGame;
