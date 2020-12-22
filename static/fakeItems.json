@@ -1,0 +1,74 @@
+{
+    "productOne": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "19,99"
+    },
+    "productTwo": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "14,99"
+    },
+    "productThree": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "12,99"
+    },
+    "productFour": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "9,99"
+    },
+    "productFive": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "19,99"
+    },
+    "productSix": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "14,99"
+    },
+    "productSeven": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "12,99"
+    },
+    "productEight": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "9,99"
+    },
+    "productNine": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "19,99"
+    },
+    "productTen": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "14,99"
+    },
+    "productEleven": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "12,99"
+    },
+    "productTwelve": {
+        "title": "product name",
+        "imgsrc": "<imgsrc>",
+        "description": "Lorem ipsum",
+        "price": "9,99"
+    }
+}
