@@ -12,7 +12,7 @@
 
 <script>
 import WebshopItems from '~/components/webshopItems.vue';
-import fakeItems from '~/assets/fakeitems.json'
+import fakeItems from '~/assets/fakeItems.json'
 
 export default {
   components: {
