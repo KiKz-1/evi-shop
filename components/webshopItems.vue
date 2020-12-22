@@ -1,9 +1,9 @@
 <template>
   <section>
         <article v-for="(item, index) in items" :key="index">
+          <img :src="item.imgsrc" />
           <h4>{{item.title}}</h4>
           <p>{{item.description}}</p>
-          <img :src="item.imgsrc" />
           <small>{{item.price}}</small>
           <button @click="addToCart(item.price)">Add</button>
         </article>
@@ -39,10 +39,17 @@ export default {
         grid-auto-rows: 1fr;
     }
     article {
+        display: flex;
+        flex-flow: column nowrap;
         background-color: #eee;
         border: solid 1px #ccc;
         padding: 15px;
 
+    }
+    img {
+      max-width: 100%;
+      height: 144px;
+      object-fit: cover;
     }
     
 </style>
