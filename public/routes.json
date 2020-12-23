@@ -1,0 +1,14 @@
+{
+    "routes": [
+      {
+        "route": "/admin/*",
+        "allowedRoles": ["editor"]
+      },
+      {
+        "route": "/*",
+        "serve": "/index.html",
+        "statusCode": 200
+      }
+    ]
+  }
+  
