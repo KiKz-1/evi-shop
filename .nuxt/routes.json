@@ -1,5 +1,19 @@
 [
   {
+    "name": "cart",
+    "path": "/cart",
+    "component": "D:\\\\git\\\\evi-shop\\\\pages\\\\cart.vue",
+    "chunkName": "pages/cart",
+    "_name": "_41a40c2a"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "D:\\\\git\\\\evi-shop\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_d3f620a4"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "D:\\\\git\\\\evimatch\\\\pages\\\\index.vue",

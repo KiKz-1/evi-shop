@@ -4,5 +4,11 @@
   },
   "LazyHeader": {
     "description": "Auto imported from components/header.vue"
+  },
+  "WebshopItems": {
+    "description": "Auto imported from components/webshopItems.vue"
+  },
+  "LazyWebshopItems": {
+    "description": "Auto imported from components/webshopItems.vue"
   }
 }
