@@ -9,7 +9,7 @@
                 <textarea placeholder="Product description" />
                 <input placeholder="Product price" />
                 <input placeholder="Product image" />
-                <button>Add</button>
+                <button @click="AddArticle">Add</button>
             </article>
         </div>
 
@@ -25,6 +25,12 @@
 export default {
   layout(context) {
     return "admin";
+  },
+  methods: {
+      AddArticle() {
+          console.log('click')
+          this.$http.$post('/api/AddArticle', {})
+      }
   }
 }
 </script>
