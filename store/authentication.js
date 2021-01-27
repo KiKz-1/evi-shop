@@ -4,8 +4,11 @@ export const state = () => ({
 });
 
 export const getters =  {
-  isAuthenticated: (state) => {
+  isAuthenticated: state => {
     return state.isAuthenticated
+  },
+  userId: state => {
+    return state.authenticatedUser?.id
   }
 }
 
