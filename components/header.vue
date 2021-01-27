@@ -21,6 +21,7 @@ export default {
     logout() {
         this.$store.commit('authentication/setAuthenticatedUser', null)
         this.$store.commit('authentication/setIsAuthenticated', false)
+        this.$router.replace('/')
     }
   }
 }
