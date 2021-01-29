@@ -6,9 +6,9 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "get"
+        "delete"
       ],
-      "route": "char/{id:int?}"
+      "route": "char/{id:guid?}"
     },
     {
       "type": "http",

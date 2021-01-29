@@ -8,9 +8,10 @@
           <h4>{{item.title}}</h4>
           <p>{{item.description}}</p>
           <small>{{item.price}}</small>
-          <button @click="removeFromChar(item.id)">Remove</button>
+          <button @click="removeFromChar(item)">Remove</button>
         </article>
   </section>
+  <p v-else>The shopping cart is empty.</p>
 </div>
 </template>
 
@@ -24,14 +25,28 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('authentication', ['userId'])
+    ...mapGetters('authentication', ['userId', 'isAuthenticated'])
   },
   async mounted() {
-    this.items = await this.$http.$get(`/api/char/${this.userId}`)
+    try {
+      if(this.isAuthenticated) {
+        this.items = await this.$http.$get(`/api/char/${this.userId}`)
+      }
+    } catch (error) {
+      throw new Error(error)
+    }
   },
   methods: {
-    removeFromChar(id) {
-      // Implement delete
+    async removeFromChar(article) {
+      try {
+         await this.$http.$delete(`/api/char/${article.id}`)
+          alert(`You have successfully removed ${article.title} from the shopping cart.`)
+          // Fetch items again to update the list
+          this.items = await this.$http.$get(`/api/char/${this.userId}`)
+      } catch (error) {
+        throw new Error(error)
+      }
+
     }
   }
 }

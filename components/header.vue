@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div><nuxt-link to="/">Evi-shop</nuxt-link></div>
-        <div><nuxt-link v-if="isAuthenticated" to="/cart">Shopping cart</nuxt-link></div>
+        <div><nuxt-link to="/cart">Shopping cart</nuxt-link></div>
         <div>
           <nuxt-link v-if="!isAuthenticated" to="/login">Login</nuxt-link>
           <a href @click="logout()" v-else>Logout</a>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
     computed: {
