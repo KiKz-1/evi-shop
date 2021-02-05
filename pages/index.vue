@@ -6,7 +6,7 @@
 
       <section class="section">
         <!-- Webshop items -->
-        <WebshopItems />
+        <WebshopItems :articles="articles" />
       </section>
   </div>
 </template>
@@ -20,8 +20,16 @@ export default {
   },
   data() {
     return {
-      
+      articles: {}
     };
+  },
+  async asyncData({$http}) {
+    try {
+      const articles = await $http.$get('/api/GetArticles')
+      return {articles}
+    } catch (error) {
+      throw new Error(error)
+    }
   }
 }
 </script>
