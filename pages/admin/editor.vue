@@ -5,10 +5,10 @@
             <h3>Add new product</h3>
                 <!-- Add new product -->
             <article>
-                <input placeholder="Product name" />
-                <textarea placeholder="Product description" />
-                <input placeholder="Product price" />
-                <input placeholder="Product image" />
+                <input placeholder="Product name" v-model="product_name" />
+                <textarea placeholder="Product description" v-model="description" />
+                <input placeholder="Product price" v-model="price" />
+                <input placeholder="Product image" v-model="img" />
                 <button @click="AddArticle">Add</button>
             </article>
         </div>
@@ -26,10 +26,24 @@ export default {
   layout(context) {
     return "admin";
   },
+  data: () => {
+      return {
+          product_name: '',
+          description: '',
+          price: '',
+          img: ''
+      }
+  },
   methods: {
-      AddArticle() {
-          console.log('click')
-          this.$http.$post('/api/AddArticle', {})
+      AddArticle() {          
+          var product = {
+              product_name: this.product_name.toString(),
+              description: this.description.toString(),
+              price: this.price.toString(),
+              img: this.img.toString()
+          }
+          
+          this.$http.$post('/api/AddArticle', product)
       }
   }
 }

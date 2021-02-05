@@ -8,5 +8,5 @@ const database = client.database(databaseId);
 const container = database.container(containerId);
 
 module.exports = async function (context, req) {
-    const { resource: createdItem } = await container.items.create(req.body);
-};
+    const { resources } = await container.items.query("SELECT * from c").fetchAll();
+}

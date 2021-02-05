@@ -5,8 +5,8 @@
           <h4>{{item.title}}</h4>
           <p>{{item.description}}</p>
           <small>{{item.price}}</small>
-          <button @click="addToCart(item.price)">Add</button>
-        </article>
+          <button @click="addToCart(item)">Add</button>
+        </article>        
   </section>
 </template>
 
@@ -23,9 +23,18 @@ export default {
       items: fakeItems
     };
   },
+  async asyncData({ params, $http}) {
+    
+  },
+  async fetch() {
+    
+  },
+  mounted() {
+    
+  },
   methods: {
-    addToCart($$$) {
-      alert(`Thank you for the ${$$$}`)
+    addToCart(item) {
+      
     }
   }
 }
