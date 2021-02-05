@@ -1,13 +1,13 @@
 <template>
   <section>
-        <article v-for="(item, index) in items" :key="index">
-          <img :src="item.imgsrc" />
-          <h4>{{item.title}}</h4>
-          <p>{{item.description}}</p>
-          <small>{{item.price}}</small>
+        <article v-for="(article, index) in articles" :key="index">
+          <img :src="article.img" />
+          <h4>{{article.product_name}}</h4>
+          <p>{{article.description}}</p>
+          <small>{{article.price}}</small>
           <!-- Show the button if user is logged in. Maybe we can think of a way to still be able to add item and then
           automatically add them to the user chart after login -->
-          <button v-if="isAuthenticated" @click="addToCart(item)">Add</button>
+          <button v-if="isAuthenticated" @click="addToCart(article)">Add</button>
         </article>
   </section>
 </template>
@@ -25,6 +25,12 @@ export default {
     return {
       items: fakeItems
     };
+  },
+  props: {
+    articles: {
+      type: Array,
+      default: []
+    }
   },
   computed: {
     ...mapGetters('authentication', ['userId', 'isAuthenticated'])
