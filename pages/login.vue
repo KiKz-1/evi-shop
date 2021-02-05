@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
 import { users } from "~/assets/fakeUsers"
 
 export default {
@@ -48,6 +47,7 @@ export default {
       showError: false
     }
   },
+
   methods: {
     login() {
       this.showError = false
