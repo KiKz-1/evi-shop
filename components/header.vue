@@ -2,7 +2,7 @@
     <div class="header">
         <div>
             <nuxt-link to="/">
-                <h1 class="title"><span class="evi">Evi</span>-shop</h1>
+                <h1 class="title"><span class="evi">Evi</span><span class="shop">-shop</span></h1>
             </nuxt-link>
         </div>
 
@@ -44,6 +44,7 @@ export default {
 
     .title {
         display: inline-block;
+        color: var(--primary);
     }
 
     .title:hover {
