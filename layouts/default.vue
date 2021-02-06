@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <Header />
-    <Nuxt />
+    <Nuxt keep-alive />
   </div>
 </template>
 
@@ -38,20 +38,5 @@ html {
   grid-template-rows: auto 1fr auto;
   max-width: 80vw;
   margin: 0 auto;
-}
-
-.title {  
-  display: block;
-  font-weight: 300;
-  font-size: 6rem;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.section {
-  border: solid #eee 1px;
-  box-shadow: 1px 1px 4px #eee;
-  margin: 25px 0;
-  padding: 25px;
 }
 </style>

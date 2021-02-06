@@ -1,0 +1,22 @@
+:root {
+    --primary: #F48154;
+    --secondary: #030301;
+    --tertiary: #87F1FF;
+    --quaternary: #990033;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 250ms ease-in-out;
+}
+
+a:hover {
+    color: var(--white);
+}

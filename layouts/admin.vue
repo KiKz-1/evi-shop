@@ -1,8 +1,8 @@
 <template>
   <section class="admin">
-        <nuxt-link to="/">Store</nuxt-link>
+        <nuxt-link to="/">Back to store</nuxt-link>
         <div class="view">
-            <Nuxt />
+            <Nuxt keep-alive />
         </div>
   </section>
 </template>

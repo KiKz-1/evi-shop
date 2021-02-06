@@ -1,23 +1,22 @@
 <template>
   <div>
-      <h1 class="title">
-        Evi-shop
-      </h1>
-
       <section class="section">
         <!-- Webshop items -->
-        <WebshopItems :articles="articles" />
+        <WebshopItems v-if="Object.keys(articles).length > 0" :articles="articles" />
+        <p v-else>{{ serviceNotAvailable }}</p>
       </section>
   </div>
 </template>
 
 <script>
 import WebshopItems from '~/components/webshopItems.vue';
+import {serviceNotAvailable} from '@/mixins/errorMessage.js';
 
 export default {
   components: {
     WebshopItems
   },
+  mixins: [serviceNotAvailable],
   data() {
     return {
       articles: {}
@@ -28,7 +27,7 @@ export default {
       const articles = await $http.$get('/api/GetArticles')
       return {articles}
     } catch (error) {
-      throw new Error(error)
+      console.error(error);
     }
   }
 }
